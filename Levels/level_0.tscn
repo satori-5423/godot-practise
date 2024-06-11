@@ -1,0 +1,414 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfykebow3yll"]
+
+[ext_resource type="Script" path="res://Utility/Pause.gd" id="1_emeri"]
+[ext_resource type="PackedScene" uid="uid://b0ckp5c08rq7g" path="res://Levels/cier.tscn" id="2_b3acb"]
+[ext_resource type="PackedScene" uid="uid://btj7xc5yh4gj2" path="res://Levels/jumper.tscn" id="3_toenf"]
+[ext_resource type="PackedScene" uid="uid://q1hw6t7sjb0w" path="res://Levels/forward_wall.tscn" id="4_q2cfq"]
+[ext_resource type="PackedScene" uid="uid://bc4hw2nfspkqp" path="res://tile_map.tscn" id="5_aodkx"]
+[ext_resource type="PackedScene" uid="uid://brb4qaii8f1sv" path="res://Levels/door.tscn" id="6_sa82p"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3wv7n"]
+
+[node name="Level5" type="Node2D"]
+script = ExtResource("1_emeri")
+metadata/_edit_vertical_guides_ = [2214.0, 2305.0]
+metadata/_edit_horizontal_guides_ = [40.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.290196, 0.211765, 0.196078, 1)
+offset_right = 2369.0
+offset_bottom = 900.0
+texture = SubResource("CanvasTexture_3wv7n")
+
+[node name="Cier1" parent="." instance=ExtResource("2_b3acb")]
+position = Vector2(230, 113)
+
+[node name="Cier1" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier3" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(192, 0)
+
+[node name="Cier4" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(256, 0)
+
+[node name="Cier5" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(320, 0)
+
+[node name="Cier6" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(384, 0)
+
+[node name="Cier7" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(448, 0)
+
+[node name="Cier8" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(512, 0)
+
+[node name="Cier9" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(576, 0)
+
+[node name="Cier10" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(640, 0)
+
+[node name="Cier11" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(704, 0)
+
+[node name="Cier12" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(768, 0)
+
+[node name="Cier13" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(832, 0)
+
+[node name="Cier14" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(896, 0)
+
+[node name="Cier15" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(960, 0)
+
+[node name="Cier16" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1024, 0)
+
+[node name="Cier17" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1088, 0)
+
+[node name="Cier18" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1152, 0)
+
+[node name="Cier19" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1216, 0)
+
+[node name="Cier20" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1280, 0)
+
+[node name="Cier21" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1344, 0)
+
+[node name="Cier22" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1408, 0)
+
+[node name="Cier23" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1472, 0)
+
+[node name="Cier24" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1536, 0)
+
+[node name="Cier25" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1600, 0)
+
+[node name="Cier26" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1664, 0)
+
+[node name="Cier27" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1728, 0)
+
+[node name="Cier28" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1792, 0)
+
+[node name="Cier29" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1856, 0)
+
+[node name="Cier30" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1920, 0)
+
+[node name="Cier31" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(1984, 0)
+
+[node name="Cier32" parent="Cier1" instance=ExtResource("2_b3acb")]
+position = Vector2(2048, 0)
+
+[node name="Cier2" parent="." instance=ExtResource("2_b3acb")]
+position = Vector2(947, 673)
+rotation = 4.71239
+
+[node name="Cier1" parent="Cier2" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier3" parent="Cier2" instance=ExtResource("2_b3acb")]
+position = Vector2(192, 0)
+
+[node name="Cier4" parent="Cier2/Cier3" instance=ExtResource("2_b3acb")]
+position = Vector2(-326, -291)
+rotation = -3.14159
+
+[node name="Cier2" parent="Cier2/Cier3/Cier4" instance=ExtResource("2_b3acb")]
+position = Vector2(-6.00006, -291)
+rotation = 3.14159
+
+[node name="Cier3" parent="Cier2/Cier3/Cier4" instance=ExtResource("2_b3acb")]
+position = Vector2(-70.0001, -291)
+rotation = 3.14159
+
+[node name="Cier4" parent="Cier2/Cier3/Cier4" instance=ExtResource("2_b3acb")]
+position = Vector2(-256, 3.57628e-06)
+
+[node name="Cier1" parent="Cier2/Cier3/Cier4/Cier4" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2/Cier3/Cier4/Cier4" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier3" parent="Cier2/Cier3/Cier4/Cier4" instance=ExtResource("2_b3acb")]
+position = Vector2(192, 0)
+
+[node name="Cier4" parent="Cier2" instance=ExtResource("2_b3acb")]
+position = Vector2(48, -702)
+rotation = 1.5708
+
+[node name="Cier5" parent="Cier2" instance=ExtResource("2_b3acb")]
+position = Vector2(48, -638)
+rotation = 1.5708
+
+[node name="Cier10" parent="Cier2" instance=ExtResource("2_b3acb")]
+position = Vector2(419, -449)
+
+[node name="Cier10" parent="Cier2/Cier10" instance=ExtResource("2_b3acb")]
+position = Vector2(-244, 108)
+rotation = 1.5708
+
+[node name="Cier7" parent="Cier2" instance=ExtResource("2_b3acb")]
+position = Vector2(-144, -659)
+rotation = 1.5708
+
+[node name="Cier1" parent="Cier2/Cier7" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2/Cier7" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier3" parent="Cier2/Cier7" instance=ExtResource("2_b3acb")]
+position = Vector2(192, 0)
+
+[node name="Cier7" parent="Cier2/Cier7" instance=ExtResource("2_b3acb")]
+position = Vector2(-192, 1.06822e-05)
+
+[node name="Cier1" parent="Cier2/Cier7/Cier7" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2/Cier7/Cier7" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier8" parent="Cier2/Cier7" instance=ExtResource("2_b3acb")]
+position = Vector2(211, -204)
+rotation = 4.71239
+
+[node name="Cier1" parent="Cier2/Cier7/Cier8" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier9" parent="Cier2/Cier7" instance=ExtResource("2_b3acb")]
+position = Vector2(211, -13)
+rotation = 4.71239
+
+[node name="Cier1" parent="Cier2/Cier7/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2/Cier7/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier8" parent="Cier2" instance=ExtResource("2_b3acb")]
+position = Vector2(-144, 304)
+rotation = 1.5708
+
+[node name="Cier1" parent="Cier2/Cier8" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2/Cier8" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier8" parent="Cier2/Cier8" instance=ExtResource("2_b3acb")]
+position = Vector2(192, -0.00120544)
+
+[node name="Cier1" parent="Cier2/Cier8/Cier8" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2/Cier8/Cier8" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier9" parent="Cier2/Cier8" instance=ExtResource("2_b3acb")]
+position = Vector2(509, -0.00231325)
+
+[node name="Cier1" parent="Cier2/Cier8/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2/Cier8/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier8" parent="Cier2/Cier8/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(192, -0.00120544)
+
+[node name="Cier1" parent="Cier2/Cier8/Cier9/Cier8" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2/Cier8/Cier9/Cier8" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier3" parent="Cier2/Cier8/Cier9/Cier8" instance=ExtResource("2_b3acb")]
+position = Vector2(192, -0.000293478)
+
+[node name="Cier9" parent="Cier2/Cier8/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(229.999, -192.001)
+
+[node name="Cier1" parent="Cier2/Cier8/Cier9/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2/Cier8/Cier9/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier3" parent="Cier2/Cier8/Cier9/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(153.999, -192.001)
+
+[node name="Cier10" parent="Cier2/Cier8/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(-127.001, -191.999)
+
+[node name="Cier1" parent="Cier2/Cier8/Cier9/Cier10" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier11" parent="Cier2/Cier8/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(-17.0007, -146)
+rotation = 1.5708
+
+[node name="Cier1" parent="Cier2/Cier8/Cier9/Cier11" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2/Cier8/Cier9/Cier11" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier12" parent="Cier2/Cier8/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(-173, -14.9992)
+rotation = -1.5708
+
+[node name="Cier1" parent="Cier2/Cier8/Cier9/Cier12" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier2" parent="Cier2/Cier8/Cier9/Cier12" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier9" parent="Cier2" instance=ExtResource("2_b3acb")]
+position = Vector2(432, 56)
+rotation = 1.5708
+
+[node name="Cier5" parent="Cier2/Cier9" instance=ExtResource("2_b3acb")]
+position = Vector2(39, -3.97351e-06)
+
+[node name="Cier3" parent="." instance=ExtResource("2_b3acb")]
+position = Vector2(2290, 417)
+rotation = -1.5708
+
+[node name="Cier1" parent="Cier3" instance=ExtResource("2_b3acb")]
+position = Vector2(-64, -5.60284e-06)
+
+[node name="Cier2" parent="Cier3" instance=ExtResource("2_b3acb")]
+position = Vector2(-128, -8.53148e-06)
+
+[node name="Cier3" parent="Cier3" instance=ExtResource("2_b3acb")]
+position = Vector2(-192, -1.11901e-05)
+
+[node name="Cier4" parent="Cier3" instance=ExtResource("2_b3acb")]
+position = Vector2(-256, -1.43051e-05)
+
+[node name="Cier5" parent="Cier3" instance=ExtResource("2_b3acb")]
+position = Vector2(-16, -893)
+rotation = 1.5708
+
+[node name="Cier5" parent="Cier3/Cier5" instance=ExtResource("2_b3acb")]
+position = Vector2(64, 0)
+
+[node name="Cier6" parent="Cier3/Cier5" instance=ExtResource("2_b3acb")]
+position = Vector2(128, 0)
+
+[node name="Cier6" parent="Cier3" instance=ExtResource("2_b3acb")]
+position = Vector2(-320, -1.71026e-05)
+
+[node name="Cier7" parent="Cier3" instance=ExtResource("2_b3acb")]
+position = Vector2(-384, -1.99002e-05)
+
+[node name="Jumper1" parent="." instance=ExtResource("3_toenf")]
+position = Vector2(409, 758)
+
+[node name="Jumper6" parent="Jumper1" instance=ExtResource("3_toenf")]
+position = Vector2(832, -502)
+
+[node name="Jumper7" parent="Jumper1" instance=ExtResource("3_toenf")]
+position = Vector2(832, -431)
+
+[node name="Jumper8" parent="Jumper1" instance=ExtResource("3_toenf")]
+position = Vector2(1564, -515)
+
+[node name="Jumper9" parent="Jumper1" instance=ExtResource("3_toenf")]
+position = Vector2(832, -364)
+
+[node name="Jumper10" parent="Jumper1" instance=ExtResource("3_toenf")]
+position = Vector2(1820, 4)
+
+[node name="Jumper11" parent="Jumper1" instance=ExtResource("3_toenf")]
+position = Vector2(1415, -402)
+
+[node name="Jumper13" parent="Jumper1" instance=ExtResource("3_toenf")]
+position = Vector2(1256, -296)
+
+[node name="Jumper14" parent="Jumper1" instance=ExtResource("3_toenf")]
+position = Vector2(1256, -402)
+
+[node name="Jumper15" parent="Jumper1" instance=ExtResource("3_toenf")]
+position = Vector2(1415, -52)
+
+[node name="Jumper16" parent="Jumper1" instance=ExtResource("3_toenf")]
+position = Vector2(1564, -402)
+
+[node name="Jumper19" parent="Jumper1" instance=ExtResource("3_toenf")]
+position = Vector2(1415, -171)
+
+[node name="Jumper2" parent="." instance=ExtResource("3_toenf")]
+position = Vector2(755, 758)
+
+[node name="Jumper2" parent="Jumper2" instance=ExtResource("3_toenf")]
+position = Vector2(0, -208)
+
+[node name="Jumper3" parent="Jumper2" instance=ExtResource("3_toenf")]
+position = Vector2(0, -416)
+
+[node name="Jumper4" parent="Jumper2" instance=ExtResource("3_toenf")]
+position = Vector2(100, 0)
+
+[node name="Jumper2" parent="Jumper2/Jumper4" instance=ExtResource("3_toenf")]
+position = Vector2(0, -208)
+
+[node name="Jumper3" parent="Jumper2/Jumper4" instance=ExtResource("3_toenf")]
+position = Vector2(0, -416)
+
+[node name="Jumper3" parent="." instance=ExtResource("3_toenf")]
+position = Vector2(1062, 604)
+
+[node name="Jumper4" parent="Jumper3" instance=ExtResource("3_toenf")]
+position = Vector2(0, 102)
+
+[node name="Jumper6" parent="Jumper3" instance=ExtResource("3_toenf")]
+position = Vector2(0, 202)
+
+[node name="ForwardWall" parent="." instance=ExtResource("4_q2cfq")]
+position = Vector2(544, 480)
+rotation = -1.5708
+
+[node name="ForwardWall1" parent="ForwardWall" instance=ExtResource("4_q2cfq")]
+position = Vector2(64, 0)
+
+[node name="ForwardWall2" parent="ForwardWall" instance=ExtResource("4_q2cfq")]
+position = Vector2(128, 0)
+
+[node name="ForwardWall3" parent="ForwardWall" instance=ExtResource("4_q2cfq")]
+position = Vector2(192, 0)
+
+[node name="TileMap" parent="." instance=ExtResource("5_aodkx")]
+position = Vector2(1, 0)
+layer_0/tile_data = PackedInt32Array(327679, 1245185, 8, 393215, 1245185, 8, 458751, 1245185, 8, 524287, 1245185, 8, 589823, 1245185, 8, 655359, 1245185, 8, 720895, 1245185, 8, -1, 1245185, 8, 65535, 1245185, 8, 131071, 1245185, 8, 196607, 1245185, 8, 262143, 1245185, 8, -65536, 1245185, 8, -65535, 1245185, 8, -65534, 1245185, 8, -65533, 1245185, 8, -65532, 1245185, 8, -65531, 1245185, 8, -65530, 1245185, 8, -65529, 1245185, 8, -65528, 1245185, 8, -65527, 1245185, 8, -65526, 1245185, 8, -65525, 1245185, 8, -65524, 1245185, 8, -65523, 1245185, 8, -65522, 1245185, 8, -65521, 1245185, 8, -65520, 1245185, 8, -65519, 1245185, 8, -65518, 1245185, 8, -65517, 1245185, 8, -65516, 1245185, 8, -65500, 1245185, 8, -65501, 1245185, 8, -65502, 1245185, 8, -65503, 1245185, 8, -65504, 1245185, 8, -65505, 1245185, 8, -65506, 1245185, 8, -65507, 1245185, 8, -65508, 1245185, 8, -65509, 1245185, 8, -65510, 1245185, 8, -65511, 1245185, 8, -65512, 1245185, 8, -65513, 1245185, 8, -65514, 1245185, 8, -65515, 1245185, 8, 786431, 1245185, 8, 851967, 1245185, 8, 917503, 131073, 0, 983039, 1, 0, 851968, 131073, 0, 917504, 1, 0, 851969, 131073, 0, 851984, 131073, 0, 851985, 131073, 0, 851986, 131073, 0, 851987, 131073, 0, 851988, 131073, 0, 851989, 131073, 0, 851990, 131073, 0, 851991, 131073, 0, 851992, 131073, 0, 851993, 131073, 0, 851994, 131073, 0, 851995, 131073, 0, 851996, 327681, 2, 917536, 1, 0, 917537, 1, 0, 917538, 1, 0, 917539, 1, 0, 917540, 1, 0, 917505, 1, 0, 917506, 1, 0, 917507, 1, 0, 917508, 1, 0, 917509, 1, 0, 917510, 1, 0, 917511, 1, 0, 917512, 1, 0, 917513, 1, 0, 917514, 1, 0, 917515, 1, 0, 917516, 1, 0, 917517, 1, 0, 917518, 1, 0, 917519, 1, 0, 917520, 1, 0, 917521, 1, 0, 917522, 1, 0, 917523, 1, 0, 917524, 1, 0, 917525, 1, 0, 917526, 1, 0, 917527, 1, 0, 917528, 1, 0, 917529, 1, 0, 917530, 1, 0, 917531, 1, 0, 917532, 1, 0, 917533, 1, 0, 917534, 1, 0, 917535, 1, 0, 851970, 131073, 0, 851971, 131073, 0, 851972, 131073, 0, 851973, 131073, 0, 851974, 131073, 0, 851975, 131073, 0, 851976, 131073, 0, 851977, 131073, 0, 851978, 131073, 0, 851979, 131073, 0, 851980, 131073, 0, 851981, 131073, 0, 851982, 131073, 0, 851983, 131073, 0, 851997, 327681, 2, 851998, 327681, 2, 851999, 327681, 2, 852000, 327681, 2, 852001, 327681, 2, 852002, 327681, 2, 852003, 327681, 2, 852004, 327681, 2, 786449, 1, 2, 131074, 393217, 1, 131075, 131073, 0, 131076, 131073, 0, 131077, 131073, 0, 655365, 327681, 1, 131078, 131073, 0, 131079, 131073, 0, 131080, 131073, 0, 655368, 1114113, 9, 131081, 131073, 0, 131082, 131073, 0, 131083, 131073, 0, 131084, 131073, 0, 131085, 131073, 0, 131086, 131073, 0, 131087, 131073, 0, 131088, 131073, 0, 131089, 131073, 0, 589841, 131073, 2, 131090, 131073, 0, 131091, 131073, 0, 131092, 131073, 0, 131093, 131073, 0, 131094, 131073, 0, 196630, 1, 2, 131095, 131073, 0, 131096, 131073, 0, 131097, 131073, 0, 131098, 131073, 0, 131099, 131073, 0, 131100, 131073, 0, 131101, 131073, 0, 131102, 131073, 0, 131103, 131073, 0, 131104, 131073, 0, 131105, 131073, 0, 131106, 131073, 0, 131107, 131073, 0, 131108, 1245185, 8, 655378, 131073, 2, 589842, 131073, 1, 655379, 196609, 0, 589843, 655361, 1, 458767, 1114113, 8, 524303, 1114113, 8, 589839, 1114113, 8, 655375, 1114113, 8, 720911, 1114113, 8, 786447, 1114113, 8, 524296, 1114113, 9, 589832, 1114113, 9, 720904, 1114113, 9, 786440, 1114113, 9, 524297, 1114113, 9, 589833, 1114113, 9, 655369, 1114113, 9, 720905, 1114113, 9, 786441, 1114113, 9, 327683, 65537, 0, 327684, 196609, 0, 196616, 65537, 0, 196617, 131073, 0, 196618, 196609, 0, 655363, 65537, 0, 655364, 131073, 0, 458773, 65537, 0, 458774, 131073, 0, 458775, 131073, 0, 458776, 196609, 0, 262159, 65537, 0, 262160, 196609, 0, 458754, 1, 1, 393221, 1, 1, 458764, 1, 1, 393233, 1, 1, 327700, 1, 2, 327690, 1, 2, 655373, 1, 2, 589824, 1, 2, 262145, 1, 2, 196613, 1, 2, 720900, 1, 2, 458768, 131073, 1, 524305, 131073, 1, 524304, 131073, 2, 786468, 1245185, 8, 720932, 1245185, 8, 655396, 1245185, 8, 589860, 1245185, 8, 458788, 1245185, 8, 524324, 1245185, 8, 393252, 1245185, 8, 327716, 1245185, 8, 65572, 1245185, 8, 36, 1245185, 8, 327715, 131073, 0, 327714, 131073, 0, 327713, 131073, 0, 327712, 393217, 1, 262177, 917505, 8, 262178, 1048577, 10, 655391, 131073, 0, 655392, 131073, 0, 655393, 196609, 0, 655390, 65537, 0, 262172, 262145, 0, 655385, 1245185, 8, 655386, 1245185, 8, 720922, 1245185, 8, 720921, 1245185, 8, 786457, 1245185, 8, 786458, 1245185, 8, 458780, 262145, 0, 458785, 262145, 0, 786466, 589825, 0, 393244, 720897, 0, 196636, 720897, 1, 262147, 655361, 0, 262148, 589825, 1, 524317, 1, 1, 589858, 1, 1, 196634, 1, 1, 589847, 1, 2, 655381, 1, 2, 720926, 1, 2, 393243, 1, 2, 327704, 1, 2, 393250, 1, 2)
+
+[node name="Door" parent="." instance=ExtResource("6_sa82p")]
+position = Vector2(2337, 224)
+
+[node name="Door" parent="Door" instance=ExtResource("6_sa82p")]
+position = Vector2(0, 64)

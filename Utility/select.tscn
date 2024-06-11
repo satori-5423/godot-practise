@@ -1,0 +1,109 @@
+[gd_scene load_steps=10 format=3 uid="uid://crlkgbqxcntay"]
+
+[ext_resource type="Texture2D" uid="uid://ce3vn0ovwnurk" path="res://kenney_abstract-platformer/PNG/Backgrounds/set1_background.png" id="1_8t801"]
+[ext_resource type="Texture2D" uid="uid://bfqy1b3bf0g0p" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_roll.png" id="2_cacvo"]
+[ext_resource type="Script" path="res://Utility/BlueButton.gd" id="3_c10g4"]
+[ext_resource type="Texture2D" uid="uid://dr4uki0a7vnhk" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_roll.png" id="3_l4f54"]
+[ext_resource type="Texture2D" uid="uid://dhl0jykiettfh" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_roll.png" id="4_6urhp"]
+[ext_resource type="Script" path="res://Utility/GreenButton.gd" id="5_dh4et"]
+[ext_resource type="Texture2D" uid="uid://bx64pw6sd1ww" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_roll.png" id="5_gmh2b"]
+[ext_resource type="Script" path="res://Utility/GreyButton.gd" id="7_vby83"]
+[ext_resource type="Script" path="res://Utility/RedButton.gd" id="9_oijxo"]
+
+[node name="Select" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 640.0
+offset_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_8t801")
+
+[node name="c1" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_left = 640.0
+offset_right = 1657.0
+offset_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_8t801")
+
+[node name="c2" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_top = 480.0
+offset_right = 640.0
+offset_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_8t801")
+
+[node name="c3" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 480.0
+offset_right = 1657.0
+offset_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_8t801")
+
+[node name="PlayerBlueRoll" type="Sprite2D" parent="."]
+position = Vector2(280, 265)
+scale = Vector2(5, 5)
+texture = ExtResource("2_cacvo")
+
+[node name="Button" type="Button" parent="PlayerBlueRoll"]
+offset_left = -20.0
+offset_top = 56.0
+offset_right = 16.0
+offset_bottom = 87.0
+scale = Vector2(1.12467, 1.10138)
+text = "√"
+script = ExtResource("3_c10g4")
+
+[node name="PlayerGreenRoll" type="Sprite2D" parent="."]
+position = Vector2(627, 265)
+scale = Vector2(5, 5)
+texture = ExtResource("3_l4f54")
+
+[node name="Button" type="Button" parent="PlayerGreenRoll"]
+offset_left = -20.0
+offset_top = 56.0
+offset_right = 16.0
+offset_bottom = 87.0
+scale = Vector2(1.12467, 1.10138)
+text = "√"
+script = ExtResource("5_dh4et")
+
+[node name="PlayerGreyRoll" type="Sprite2D" parent="."]
+position = Vector2(973, 265)
+scale = Vector2(5, 5)
+texture = ExtResource("4_6urhp")
+
+[node name="Button" type="Button" parent="PlayerGreyRoll"]
+offset_left = -18.0
+offset_top = 56.0
+offset_right = 18.0
+offset_bottom = 87.0
+scale = Vector2(1.12467, 1.10138)
+text = "√"
+script = ExtResource("7_vby83")
+
+[node name="PlayerRedRoll" type="Sprite2D" parent="."]
+position = Vector2(1320, 265)
+scale = Vector2(5, 5)
+texture = ExtResource("5_gmh2b")
+
+[node name="Button" type="Button" parent="PlayerRedRoll"]
+offset_left = -20.0
+offset_top = 56.0
+offset_right = 16.0
+offset_bottom = 87.0
+scale = Vector2(1.12467, 1.10138)
+text = "√"
+script = ExtResource("9_oijxo")
+
+[connection signal="pressed" from="PlayerBlueRoll/Button" to="PlayerBlueRoll/Button" method="_on_pressed"]
+[connection signal="pressed" from="PlayerGreenRoll/Button" to="PlayerGreenRoll/Button" method="_on_pressed"]
+[connection signal="pressed" from="PlayerGreyRoll/Button" to="PlayerGreyRoll/Button" method="_on_pressed"]
+[connection signal="pressed" from="PlayerRedRoll/Button" to="PlayerRedRoll/Button" method="_on_pressed"]

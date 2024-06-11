@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ndw63g6xf7gu"]
+
+[ext_resource type="Script" path="res://Other/door_opened.gd" id="1_gd8ot"]
+[ext_resource type="Texture2D" uid="uid://bw02e114nlq2f" path="res://kenney_abstract-platformer/PNG/Other/doorRed_top.png" id="1_msbwy"]
+[ext_resource type="Texture2D" uid="uid://2bnm07ylv5gm" path="res://kenney_abstract-platformer/PNG/Other/doorRed.png" id="2_ttdob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7a574"]
+size = Vector2(64, 192)
+
+[node name="DoorOpen" type="Node2D"]
+visible = false
+script = ExtResource("1_gd8ot")
+
+[node name="1" type="Sprite2D" parent="."]
+texture = ExtResource("1_msbwy")
+
+[node name="2" type="Sprite2D" parent="1"]
+position = Vector2(0, 64)
+texture = ExtResource("2_ttdob")
+
+[node name="3" type="Sprite2D" parent="1"]
+position = Vector2(0, 128)
+texture = ExtResource("2_ttdob")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 64)
+shape = SubResource("RectangleShape2D_7a574")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

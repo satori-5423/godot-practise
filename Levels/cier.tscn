@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0ckp5c08rq7g"]
+
+[ext_resource type="Texture2D" uid="uid://bq7cko6h2yqv5" path="res://kenney_abstract-platformer/PNG/Other/spikesHigh.png" id="1_ksl7u"]
+
+[node name="Cier" type="StaticBody2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-22, -16, -32, 15, 32, 15, 22, -16, 17, -16, 10, 8, 2, -16, -3, -16, -10, 8, -17, -16)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.95, 0.95)
+polygon = PackedVector2Array(-22, -16, -32, 15, 32, 15, 22, -16, 17, -16, 10, 8, 2, -16, -3, -16, -10, 8, -17, -16)
+one_way_collision = true
+
+[node name="SpikesHigh" type="Sprite2D" parent="."]
+position = Vector2(0, -0.5)
+scale = Vector2(1, 1.03333)
+texture = ExtResource("1_ksl7u")

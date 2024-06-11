@@ -1,0 +1,171 @@
+[gd_scene load_steps=10 format=3 uid="uid://ddcx7nv63yxs6"]
+
+[ext_resource type="Script" path="res://Utility/option_page.gd" id="1_3ewmf"]
+[ext_resource type="Texture2D" uid="uid://ce3vn0ovwnurk" path="res://kenney_abstract-platformer/PNG/Backgrounds/set1_background.png" id="1_x75se"]
+[ext_resource type="Script" path="res://Utility/ChangePlayer.gd" id="2_djnkh"]
+[ext_resource type="Script" path="res://Utility/English.gd" id="3_bxwpq"]
+[ext_resource type="Script" path="res://Utility/Ok.gd" id="3_pqi2r"]
+[ext_resource type="Script" path="res://Utility/Chinese.gd" id="4_80dge"]
+[ext_resource type="Script" path="res://Utility/Music.gd" id="4_hbc1q"]
+[ext_resource type="Script" path="res://Utility/Japanese.gd" id="5_46l02"]
+[ext_resource type="Script" path="res://Global.gd" id="6_scvd7"]
+
+[node name="OptionPage" type="Node2D"]
+script = ExtResource("1_3ewmf")
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 640.0
+offset_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_x75se")
+
+[node name="c1" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_left = 640.0
+offset_right = 1657.0
+offset_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_x75se")
+
+[node name="c2" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_top = 480.0
+offset_right = 640.0
+offset_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_x75se")
+
+[node name="c3" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 480.0
+offset_right = 1657.0
+offset_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_x75se")
+
+[node name="English" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 72
+text = "English"
+script = ExtResource("3_bxwpq")
+
+[node name="Chinese" type="Button" parent="."]
+offset_right = 254.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 72
+text = "中文"
+script = ExtResource("4_80dge")
+
+[node name="Japanese" type="Button" parent="."]
+offset_right = 254.0
+offset_bottom = 107.0
+theme_override_font_sizes/font_size = 72
+text = "日本語"
+script = ExtResource("5_46l02")
+
+[node name="ChangePlayer" type="Button" parent="."]
+offset_right = 751.0
+offset_bottom = 164.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 72
+script = ExtResource("2_djnkh")
+
+[node name="Ok" type="Button" parent="."]
+offset_top = 164.0
+offset_right = 255.0
+offset_bottom = 311.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 72
+script = ExtResource("3_pqi2r")
+
+[node name="Music" type="Label" parent="."]
+offset_left = 357.0
+offset_top = 205.0
+offset_right = 560.0
+offset_bottom = 305.0
+theme_override_font_sizes/font_size = 72
+script = ExtResource("4_hbc1q")
+
+[node name="CheckButton" type="CheckButton" parent="Music"]
+layout_mode = 0
+offset_left = 239.0
+offset_right = 283.0
+offset_bottom = 24.0
+scale = Vector2(3.3806, 4.1886)
+button_pressed = true
+language = {
+"chinese": {
+"end": {
+"thanks": "感谢您的游玩!"
+},
+"main": {
+"exit": "退出",
+"option": "选项",
+"play": "开始"
+},
+"option_page": {
+"change_character": "更换角色",
+"music": "音乐",
+"ok": "完成"
+},
+"pause": {
+"continue": "继续",
+"paused": "暂停"
+}
+},
+"english": {
+"end": {
+"thanks": "Thanks for playing!"
+},
+"main": {
+"exit": "Exit",
+"option": "Option",
+"play": "Play"
+},
+"option_page": {
+"change_character": "Change character",
+"music": "Music",
+"ok": "Ok"
+},
+"pause": {
+"continue": "Continue",
+"paused": "PAUSED"
+}
+},
+"japanese": {
+"end": {
+"thanks": "プレイしていただき
+ありがとうございました!"
+},
+"main": {
+"exit": "終了",
+"option": "オプション",
+"play": "スタート"
+},
+"option_page": {
+"change_character": "キャラクターを変える",
+"music": "音楽",
+"ok": "完了"
+},
+"pause": {
+"continue": "つづく",
+"paused": "一時停止"
+}
+}
+}
+script = ExtResource("6_scvd7")
+
+[connection signal="pressed" from="English" to="English" method="_on_pressed"]
+[connection signal="pressed" from="Chinese" to="Chinese" method="_on_pressed"]
+[connection signal="pressed" from="Japanese" to="Japanese" method="_on_pressed"]
+[connection signal="pressed" from="ChangePlayer" to="ChangePlayer" method="_on_pressed"]
+[connection signal="pressed" from="Ok" to="Ok" method="_on_pressed"]
+[connection signal="pressed" from="Music/CheckButton" to="Music/CheckButton" method="_on_check_button_pressed"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://q1hw6t7sjb0w"]
+
+[ext_resource type="Texture2D" uid="uid://bobqngx60jre5" path="res://kenney_abstract-platformer/PNG/Other/blockRed_puzzle.png" id="1_j4s68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0mon2"]
+size = Vector2(64, 64)
+
+[node name="ForwardWall" type="StaticBody2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_0mon2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.95, 0.95)
+shape = SubResource("RectangleShape2D_0mon2")
+one_way_collision = true
+
+[node name="BlockRedPuzzle" type="Sprite2D" parent="."]
+texture = ExtResource("1_j4s68")

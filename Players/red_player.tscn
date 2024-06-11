@@ -1,0 +1,111 @@
+[gd_scene load_steps=18 format=3 uid="uid://dc0yxspb5e27x"]
+
+[ext_resource type="Script" path="res://Players/Player.gd" id="1_mskcv"]
+[ext_resource type="Texture2D" uid="uid://bx64pw6sd1ww" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_roll.png" id="2_qjv1x"]
+[ext_resource type="Script" path="res://Players/PlayerRoll.gd" id="3_e08ct"]
+[ext_resource type="Texture2D" uid="uid://dmglovtfh7lha" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_up1.png" id="3_tth2d"]
+[ext_resource type="Texture2D" uid="uid://chxssphavysxx" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_walk2.png" id="4_5uau1"]
+[ext_resource type="Texture2D" uid="uid://ydlcjyb2grxw" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_duck.png" id="4_ptyn5"]
+[ext_resource type="Texture2D" uid="uid://28bncpyefw2g" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_up2.png" id="4_upyit"]
+[ext_resource type="Texture2D" uid="uid://daeoxpwh2nwuc" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_dead.png" id="4_yi51f"]
+[ext_resource type="Texture2D" uid="uid://blthfujimxl6o" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_up3.png" id="5_h0f73"]
+[ext_resource type="Texture2D" uid="uid://ctaqg4t4jjowo" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_fall.png" id="5_qqxp5"]
+[ext_resource type="Texture2D" uid="uid://dn5punwvnujqk" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_walk3.png" id="5_wg2rw"]
+[ext_resource type="Texture2D" uid="uid://d3fi37ubh5gp1" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_walk4.png" id="6_3g7mo"]
+[ext_resource type="Texture2D" uid="uid://i30syugrclwm" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_stand.png" id="7_2kg37"]
+[ext_resource type="Texture2D" uid="uid://c23lcqia26vkc" path="res://kenney_abstract-platformer/PNG/Players/Player Red/playerRed_walk5.png" id="7_lgjxw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uiqhj"]
+radius = 20.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v0at5"]
+load_path = "res://.godot/imported/playerRed_walk1.png-147ed736f7126a354b326fbef8cd39a1.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_duu5w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_yi51f")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ptyn5")
+}],
+"loop": true,
+"name": &"duck",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_qqxp5")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("3_tth2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_upyit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h0f73")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_2kg37")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_v0at5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5uau1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wg2rw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3g7mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lgjxw")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_mskcv")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_uiqhj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.95, 0.95)
+shape = SubResource("CircleShape2D_uiqhj")
+
+[node name="PlayerRedRoll" type="Sprite2D" parent="."]
+texture = ExtResource("2_qjv1x")
+script = ExtResource("3_e08ct")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_duu5w")
+animation = &"dead"

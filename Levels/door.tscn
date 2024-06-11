@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://brb4qaii8f1sv"]
+
+[ext_resource type="Texture2D" uid="uid://cquc7avnjcgxg" path="res://kenney_abstract-platformer/PNG/Other/lockRedLock.png" id="1_jg4ge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ooi"]
+size = Vector2(62, 62)
+
+[node name="Door" type="StaticBody2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_l8ooi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.95, 0.95)
+shape = SubResource("RectangleShape2D_l8ooi")
+
+[node name="LockRedLock" type="Sprite2D" parent="."]
+texture = ExtResource("1_jg4ge")

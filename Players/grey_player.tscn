@@ -1,0 +1,111 @@
+[gd_scene load_steps=18 format=3 uid="uid://doqtkff8i1oar"]
+
+[ext_resource type="Script" path="res://Players/Player.gd" id="1_175po"]
+[ext_resource type="Texture2D" uid="uid://d4ghmps4fw1an" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_walk1.png" id="2_7gw8u"]
+[ext_resource type="Script" path="res://Players/PlayerRoll.gd" id="3_dfcjh"]
+[ext_resource type="Texture2D" uid="uid://bp47b3skhafju" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_dead.png" id="4_a30ol"]
+[ext_resource type="Texture2D" uid="uid://cp0gqw6ssmlov" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_duck.png" id="4_et5on"]
+[ext_resource type="Texture2D" uid="uid://bi1ab2dgh2nie" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_fall.png" id="5_aheay"]
+[ext_resource type="Texture2D" uid="uid://dth8hs7227xsc" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_up1.png" id="6_l6658"]
+[ext_resource type="Texture2D" uid="uid://k1bimxi1a7gd" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_up2.png" id="7_kd2l0"]
+[ext_resource type="Texture2D" uid="uid://n6vo6txsyhqd" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_up3.png" id="8_ql0o6"]
+[ext_resource type="Texture2D" uid="uid://dt134vcla3q2o" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_stand.png" id="9_0q7kq"]
+[ext_resource type="Texture2D" uid="uid://c26f6bxim2ff" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_walk2.png" id="10_lnr1n"]
+[ext_resource type="Texture2D" uid="uid://cx0iq2iuugdw7" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_walk3.png" id="11_j7ti2"]
+[ext_resource type="Texture2D" uid="uid://dnec6tj3hib36" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_walk4.png" id="12_7bjw7"]
+[ext_resource type="Texture2D" uid="uid://dxgf7jrapqgbr" path="res://kenney_abstract-platformer/PNG/Players/Player Grey/playerGrey_walk5.png" id="13_0ka42"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_faovm"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uiqhj"]
+radius = 20.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_16gc0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_a30ol")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_et5on")
+}],
+"loop": true,
+"name": &"duck",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_aheay")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("6_l6658")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kd2l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ql0o6")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_0q7kq")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7gw8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lnr1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_j7ti2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7bjw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0ka42")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_175po")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_faovm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.95, 0.95)
+shape = SubResource("CircleShape2D_uiqhj")
+
+[node name="PlayerRedRoll" type="Sprite2D" parent="."]
+texture = ExtResource("2_7gw8u")
+script = ExtResource("3_dfcjh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_16gc0")
+animation = &"dead"

@@ -1,0 +1,114 @@
+[gd_scene load_steps=19 format=3 uid="uid://b5m15jmh64tjy"]
+
+[ext_resource type="Script" path="res://Players/Player.gd" id="1_nvvck"]
+[ext_resource type="Script" path="res://Players/PlayerRoll.gd" id="2_xdjsb"]
+[ext_resource type="Texture2D" uid="uid://duvqclot2d2nx" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_dead.png" id="3_2lmjv"]
+[ext_resource type="Texture2D" uid="uid://d02ynd4u786v6" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_duck.png" id="3_46oj8"]
+[ext_resource type="Texture2D" uid="uid://b1pxc3xll5pk5" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_fall.png" id="4_rcfpc"]
+[ext_resource type="Texture2D" uid="uid://8x8cqt74an3o" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_up1.png" id="5_wp53f"]
+[ext_resource type="Texture2D" uid="uid://dppreu5smg2i2" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_up2.png" id="6_o14ag"]
+[ext_resource type="Texture2D" uid="uid://h0l5kkt7tybd" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_up3.png" id="7_ja80t"]
+[ext_resource type="Texture2D" uid="uid://bfyfdjwlc1tum" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_stand.png" id="8_cv4xn"]
+[ext_resource type="Texture2D" uid="uid://bur01eh8b1esl" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk1.png" id="9_0cfqi"]
+[ext_resource type="Texture2D" uid="uid://exc20o35xg4" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk2.png" id="10_py625"]
+[ext_resource type="Texture2D" uid="uid://c8samsgnnhcv4" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk3.png" id="11_nyv40"]
+[ext_resource type="Texture2D" uid="uid://disfacluojj5o" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk4.png" id="12_35ddm"]
+[ext_resource type="Texture2D" uid="uid://dyytr142dvqbx" path="res://kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk5.png" id="13_c7fqm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1rl0k"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uiqhj"]
+radius = 20.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hnc81"]
+load_path = "res://.godot/imported/playerBlue_walk1.png-c18e9ab1763d433975b4f6e674543c27.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_63baf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2lmjv")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_46oj8")
+}],
+"loop": true,
+"name": &"duck",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_rcfpc")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("5_wp53f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o14ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ja80t")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_cv4xn")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_0cfqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_py625")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_nyv40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_35ddm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_c7fqm")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_nvvck")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_1rl0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.95, 0.95)
+shape = SubResource("CircleShape2D_uiqhj")
+
+[node name="PlayerRedRoll" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_hnc81")
+script = ExtResource("2_xdjsb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_63baf")
+animation = &"dead"

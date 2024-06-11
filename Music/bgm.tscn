@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh7a4n2hj6egr"]
+
+[ext_resource type="AudioStream" uid="uid://vapae7lotyib" path="res://Music/just-relax-11157.mp3" id="1_8n0i8"]
+[ext_resource type="Script" path="res://Music/bgm.gd" id="2_k8yak"]
+
+[node name="BGM" type="AudioStreamPlayer"]
+stream = ExtResource("1_8n0i8")
+autoplay = true
+script = ExtResource("2_k8yak")

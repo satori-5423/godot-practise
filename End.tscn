@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://b34kpe8b2gc70"]
+
+[ext_resource type="Texture2D" uid="uid://ce3vn0ovwnurk" path="res://kenney_abstract-platformer/PNG/Backgrounds/set1_background.png" id="1_ctko5"]
+[ext_resource type="Script" path="res://Label.gd" id="2_72yqf"]
+[ext_resource type="Script" path="res://Exit.gd" id="4_yoj63"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p71op"]
+font_size = 100
+
+[node name="Main" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 640.0
+offset_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_ctko5")
+
+[node name="c1" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_left = 640.0
+offset_right = 1657.0
+offset_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_ctko5")
+
+[node name="c2" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_top = 480.0
+offset_right = 640.0
+offset_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_ctko5")
+
+[node name="c3" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 480.0
+offset_right = 1657.0
+offset_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_ctko5")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1600.0
+offset_bottom = 154.0
+label_settings = SubResource("LabelSettings_p71op")
+horizontal_alignment = 1
+script = ExtResource("2_72yqf")
+
+[node name="Exit" type="Button" parent="."]
+offset_right = 295.0
+offset_bottom = 154.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 72
+script = ExtResource("4_yoj63")
+
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]

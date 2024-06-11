@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2oojcfnjle24"]
+
+[ext_resource type="FontFile" uid="uid://26o56dnjlkcu" path="res://kenney_abstract-platformer/LXGWWenKai-Regular.ttf" id="1_i8lhb"]
+
+[sub_resource type="Theme" id="Theme_s8pi2"]
+default_font = ExtResource("1_i8lhb")
+
+[node name="Font" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = SubResource("Theme_s8pi2")

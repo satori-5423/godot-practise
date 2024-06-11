@@ -1,0 +1,111 @@
+[gd_scene load_steps=18 format=3 uid="uid://65pf6x1gvla5"]
+
+[ext_resource type="Script" path="res://Players/Player.gd" id="1_33qxk"]
+[ext_resource type="Texture2D" uid="uid://bjmywpidedok0" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_walk1.png" id="2_okgos"]
+[ext_resource type="Script" path="res://Players/PlayerRoll.gd" id="3_mdunu"]
+[ext_resource type="Texture2D" uid="uid://caqx80tuo16l1" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_dead.png" id="4_o61vo"]
+[ext_resource type="Texture2D" uid="uid://caqncge74a0dh" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_duck.png" id="4_qr2ai"]
+[ext_resource type="Texture2D" uid="uid://0n1bsfek3auu" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_fall.png" id="5_g081r"]
+[ext_resource type="Texture2D" uid="uid://ckpd6t265pie6" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_up1.png" id="6_erutm"]
+[ext_resource type="Texture2D" uid="uid://d1q4qg6a4dpyj" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_up2.png" id="7_ebso4"]
+[ext_resource type="Texture2D" uid="uid://k3pihl1t2lto" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_up3.png" id="8_vqt7c"]
+[ext_resource type="Texture2D" uid="uid://c2nqsal0wxxka" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_stand.png" id="9_mvibc"]
+[ext_resource type="Texture2D" uid="uid://c7i5u78g3u4g1" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_walk2.png" id="10_bbs4d"]
+[ext_resource type="Texture2D" uid="uid://c34ksi6yna8hq" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_walk3.png" id="11_bhd2b"]
+[ext_resource type="Texture2D" uid="uid://dh5kf5jw52mtf" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_walk4.png" id="12_15ogy"]
+[ext_resource type="Texture2D" uid="uid://bldm5tffa7r4c" path="res://kenney_abstract-platformer/PNG/Players/Player Green/playerGreen_walk5.png" id="13_rkwhb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lvcyw"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uiqhj"]
+radius = 20.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_opy5i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_o61vo")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qr2ai")
+}],
+"loop": true,
+"name": &"duck",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_g081r")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("6_erutm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ebso4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vqt7c")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_mvibc")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_okgos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bbs4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bhd2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_15ogy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rkwhb")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_33qxk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_lvcyw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.95, 0.95)
+shape = SubResource("CircleShape2D_uiqhj")
+
+[node name="PlayerRedRoll" type="Sprite2D" parent="."]
+texture = ExtResource("2_okgos")
+script = ExtResource("3_mdunu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_opy5i")
+animation = &"dead"

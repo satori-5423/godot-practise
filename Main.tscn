@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://15l552ni5mll"]
+
+[ext_resource type="Texture2D" uid="uid://ce3vn0ovwnurk" path="res://kenney_abstract-platformer/PNG/Backgrounds/set1_background.png" id="1_qxa8y"]
+[ext_resource type="Script" path="res://Play.gd" id="2_1mmjs"]
+[ext_resource type="Script" path="res://Option.gd" id="3_l0vsl"]
+[ext_resource type="Script" path="res://Exit.gd" id="3_lml3i"]
+
+[node name="Main" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 640.0
+offset_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_qxa8y")
+
+[node name="c1" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_left = 640.0
+offset_right = 1657.0
+offset_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_qxa8y")
+
+[node name="c2" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_top = 480.0
+offset_right = 640.0
+offset_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_qxa8y")
+
+[node name="c3" type="TextureRect" parent="background"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 480.0
+offset_right = 1657.0
+offset_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_qxa8y")
+
+[node name="Play" type="Button" parent="."]
+offset_right = 295.0
+offset_bottom = 154.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 72
+script = ExtResource("2_1mmjs")
+
+[node name="Option" type="Button" parent="."]
+process_mode = 3
+offset_top = 184.0
+offset_right = 295.0
+offset_bottom = 338.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 72
+script = ExtResource("3_l0vsl")
+
+[node name="Exit" type="Button" parent="."]
+offset_top = 368.0
+offset_right = 295.0
+offset_bottom = 522.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 72
+script = ExtResource("3_lml3i")
+
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Option" to="Option" method="_on_pressed"]
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]
